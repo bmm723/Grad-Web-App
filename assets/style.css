@@ -1,0 +1,496 @@
+/* COLORS -------------
+  rit orange:   #f26d23
+  rit grey:     #545454
+  rit white:    #fefefe  
+  login green:  #37c24d
+  login hover:  #2b9b3d
+*/
+/*// Group 10: Graduate Capstone Project
+// authors: Kevin Reynolds, Daniel Eden, Brie McIntosh, Roy Tran
+// date: RIT Fall Semester 2017*/
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: arial, sans-serif;
+	}
+
+
+/*banner, logo, logout styling --------------------------------------*/
+#banner {
+	background: #f26d23;
+	height: 60px;
+	width: 100%;
+	border-bottom: #545454 solid 5px;
+	margin-bottom: 58px;
+	position: fixed;
+	top: 0px;
+	}
+
+#logo {
+	margin-left: 15px;
+	margin-top: 10px;
+	}
+	
+#logout {
+	position: absolute;
+	right: 40px;
+	top: 40px;
+	color: #fefefe;
+}
+
+
+/*inrto page styling --------------------------------------*/
+h1 {
+	font-family: 'Montserrat', sans-serif;
+	color: #545454;
+	}
+
+#intro {
+	height:380px;
+	width: 65%;
+	margin: auto;
+	text-align: center;
+	margin-top: 150px;
+	}
+
+#who {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 120%;
+	color: #545454;
+	}
+
+#who span {
+	color: #f26d23;
+	font-size: 158%;
+	}
+
+
+/*login button styling --------------------------------------*/
+#login {
+	background-color: #37c24d;
+	height: 50px;
+	width: 125px;
+	text-align: center;
+	border-radius: 5px;
+	font-size: 120%;
+	line-height: 47px;
+	margin: auto;
+	color: #fefefe;
+	cursor: pointer;
+	}
+
+
+#login:hover {
+    background-color: #2b9b3d;
+    -webkit-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
+	}
+
+/*intro icons styling --------------------------------------*/
+.icons {
+	display: inline-flex;
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	color: #545454;
+	}
+
+.icons div {
+	margin-top: 30px;
+	margin-bottom:-20px;
+	margin-left:30px;
+	margin-right:30px;
+	}
+
+.icons p {
+	line-height: 0px;
+	}
+
+
+
+/*intro text styling --------------------------------------*/
+#intro_text {
+	background-color: #545454;
+	color: #fefefe;
+	position: fixed;
+	bottom: 0;
+    text-align: center;
+	}
+
+#intro_text p {
+	margin-left: 10%;
+	margin-right: 10%;
+	padding-top: 1.7%;
+	margin-bottom:0;
+	}
+
+#intro_text span {
+	position: relative;
+	bottom: 10px;
+	/*left: 5px;*/
+	font-size: 80%;
+	font-style: italic;
+	color: #f26d23;
+	}
+
+#intro_text a {
+	color: #f26d23;
+	font-size: 80%;
+	font-style: italic;
+	}
+
+/*modal login ----------------------------------------*/	
+/*refference: W3 Schools Tutorials
+  url: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal2*/
+
+.text_field {
+	margin-bottom: 10px;
+	height: 25px;
+	border-radius: 3px;
+
+}
+
+#submit_login {
+	background-color: #37c24d;
+/*	height: 50px;
+	width: 125px;*/
+	text-align: center;
+	border-radius: 5px;
+	font-size: 120%;
+	/*line-height: 47px;*/
+	margin: auto;
+	color: #fefefe;
+}
+
+#submit_login:hover {
+    background-color: #2b9b3d;
+    -webkit-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
+	}
+
+.modal-content form {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+.modal-content a {
+	color: #545454;
+}
+
+.modal-content a:hover {
+	color: white;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #f26d23;
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #f26d23;
+    color: white;
+}
+
+
+/*user content ---------------------------------------*/
+.identifier {
+	position: fixed;
+    top: 65px;
+    right: 5px;
+    text-align: right;
+	}
+
+.identifier p {
+	margin: 3px;
+	}
+
+#user_content {
+    margin-left: 227px;
+    width: 600px;
+    margin-bottom: 75px;
+    margin-top: 150px;
+	}
+
+#user_content span {
+	margin-right: 4em;
+	}
+
+#edit_desc textarea {
+	height: 14em;
+	width: 26em;
+	}
+
+.cancel {
+	position: fixed;
+	left: 10px;
+	top: 70px;
+	background-color: #f26d23;
+	border-radius: 8px;
+	padding: 6px;
+	}
+
+.cancel a {
+	color: #fefefe;
+	font-weight: bold;
+	text-decoration: none;
+	}
+
+.cancel a:hover {
+	color: #545454;
+	}
+
+/*delete ---------------------------------------------*/
+.del_no {
+	background-color: #f26d23;
+	border-radius: 8px;
+	padding: 6px;
+	color: #fefefe;
+	font-weight: bold;
+	text-decoration: none;
+	}
+
+.del_yes {
+	background-color: #37c24d;
+	border-radius: 8px;
+	padding: 6px;
+	color: #fefefe;
+	font-weight: bold;
+	text-decoration: none;
+	margin-right: 35px;
+	}
+
+.del_no:hover {
+	color: #545454;
+	}
+
+.del_yes:hover {
+	color: #545454;
+	}
+
+#delete_div {
+	margin-top: 22px;
+	}
+
+/*footer ---------------------------------------------*/
+#footer {
+	height: 35px;
+	text-align: center;
+	background-color: #545454;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	line-height: 2em;
+	}
+
+#footer span {
+	position: relative;
+	font-size: 80%;
+	font-style: italic;
+	color: #f26d23;
+	}
+
+#footer a {
+	color: #f26d23;
+	font-size: 80%;
+	font-style: italic;
+	}
+
+/*table stylings --------------------------------------*/
+#table_holder {
+	margin-right: 2%;
+	margin-left: 2%;
+	}
+
+.add {
+	text-align: center;
+	}
+
+tbody a {
+	color: #fefefe;
+	font-weight: bold;
+	text-decoration: none;
+	background-color: #f26d23;
+	border-radius: 4px;
+	padding: 3px;
+	}
+
+tbody a:hover {
+	background-color: #a03f0b;
+	}
+
+.prof_pic {
+	min-height: 60px;
+	max-height: 60px;
+	margin-left: auto;
+	margin-right: auto;
+	}
+
+
+/*register form styles -------------------------------*/
+#reg_form div {
+	margin-right: 1em;
+	}
+
+#reg_form input {
+	margin-bottom: .5em;
+	}
+
+#reg_form {
+	display: inline-flex;
+	}
+
+#form_labels {
+	line-height: 27px;
+	color: #545454;
+	}
+
+#reg_sub {
+    /*height: 24px;*/
+    position: absolute;
+    top: 513px;	
+}
+
+#form_inputs textarea {
+	width: 223px; 
+	height: 117px;
+	resize: none;
+	}
+
+
+/*user documentation styling -------------------------*/
+#user_doc_h1 {
+	position: absolute;
+	top: 55px;
+	left: 10px;
+	}
+
+
+/*project details ------------------------------------*/
+#grade_text {
+	font-size: 150%;
+	}
+
+#hist_table tr:nth-child(odd) {
+	background-color: #dddddd;
+	}
+
+#gradeInput{
+	width: 32px;
+}
+
+#gradeInputNoValue{
+	width: 60px;
+}
+
+#gradeSubmit{
+	margin-left: 2em;
+}
+
+#statusComment{
+	width: 313px;
+	height: 100px;
+}
+
+#updateStatus{
+	margin-left: 226px;
+}
+
+/*media queries --------------------------------------*/
+@media screen and (min-width: 1450px) {
+	#intro_text p {
+		margin-left: 20%;
+		margin-right: 20%;
+		}
+	}
+
+@media screen and (min-width: 1200px) {
+	#user_content {
+		margin-left: auto;
+		margin: auto;
+		margin-top: 150px;
+		margin-bottom: 75px;
+		}
+	}
+
+@media screen and (min-width: 1599px) {
+	#banner {
+		margin-bottom: 120px;
+		}
+	#intro_text {
+		margin-top: 120px;
+		margin-top: 120px;
+		}
+	}
+
+@media screen and (max-width: 660px) {
+	.icons {
+		display: block;
+		}
+	#user_content {
+		margin-left: 75px;
+		}
+	#intro_text {
+		margin-top: 217px;
+		}
+	}	
